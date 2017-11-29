@@ -19,7 +19,7 @@ define('redturtle-patterns-slider', [
       var _this = this;
       _this.$el.slick(_this.options);
 
-      var event = new CustomEvent('pat-slider-init');
+      var event = new CustomEvent('patSliderInit');
       _this.$el[0].dispatchEvent(event);
     },
   });
