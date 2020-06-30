@@ -38,10 +38,4 @@
       name="redturtle-patterns-slider"
       />
 
-  <browser:resourceDirectory
-      name="redturtle-patterns-slider-libraries"
-      directory="libraries"
-      />
-
-
 </configure>

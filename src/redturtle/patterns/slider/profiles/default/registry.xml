@@ -9,13 +9,6 @@
       </value>
   </records>
 
-  <!-- EXTERNAL LIBRARIES -->
-  <records prefix="plone.resources/slick.min"
-            interface='Products.CMFPlone.interfaces.IResourceRegistry'>
-    <value key="js">++resource++redturtle-patterns-slider-libraries/slick/slick.min.js</value>
-    <value key="css">++resource++redturtle-patterns-slider-libraries/slick/slick.css</value>
-  </records>
-
   <!-- BUNDLE REGISTRATION AS RESOURCE -->
   <records prefix="plone.resources/redturtle-patterns-slider-bundle-resource"
             interface='Products.CMFPlone.interfaces.IResourceRegistry'>
@@ -32,14 +25,19 @@
     <value key="jscompilation">++plone++redturtle-patterns-slider/build/redturtle-patterns-slider-bundle-compiled.js</value>
     <value key="csscompilation">++plone++redturtle-patterns-slider/build/redturtle-patterns-slider-bundle-compiled.min.css</value>
     <value key="last_compilation">2015-02-16 00:00:00</value>
-    <value key="depends">plone</value>
+    <value key="depends">collective-slick</value>
     <value key="stub_js_modules">
      <element>jquery</element>
      <element>pat-base</element>
      <element>mockup-utils</element>
      <element>pat-logger</element>
-     <element>slick-min</element>
    </value>
+  </records>
+
+  <records prefix="plone.bundles/collective-slick"
+           interface='Products.CMFPlone.interfaces.IBundleRegistry'
+           purge="false">
+    <value key="enabled">True</value>
   </records>
 
 </registry>

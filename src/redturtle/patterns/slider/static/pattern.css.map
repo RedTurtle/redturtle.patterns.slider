@@ -1,7 +1,9 @@
 {
-"version": 3,
-"mappings": "AACE,iBAAa;EACX,gBAAgB,EAAE,GAAG",
-"sources": ["pattern.scss"],
-"names": [],
-"file": "pattern.css"
+	"version": 3,
+	"file": "pattern.css",
+	"sources": [
+		"pattern.scss"
+	],
+	"names": [],
+	"mappings": "AAAA,AACE,MADI,AACH,WAAW,AAAC,CACX,gBAAgB,CAAE,GAAG,CACtB"
 }

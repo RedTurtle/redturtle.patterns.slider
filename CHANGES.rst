@@ -5,7 +5,9 @@ Changelog
 0.1.3 (unreleased)
 ------------------
 
-- Nothing changed yet.
+BREAKING:
+- Used collective.slick slick bundle instead of a static specific one
+  [nzambello]
 
 
 0.1.2 (2018-06-11)

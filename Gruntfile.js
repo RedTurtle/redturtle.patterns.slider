@@ -1,78 +1,95 @@
+const sass = require("node-sass");
 
-module.exports = function (grunt) {
-  'use strict';
+module.exports = function(grunt) {
+  "use strict";
 
-  require('load-grunt-tasks')(grunt);
-  var productRoot = 'src/redturtle/patterns/slider';
+  require("load-grunt-tasks")(grunt);
+  var productRoot = "src/redturtle/patterns/slider";
   grunt.initConfig({
-    sass: {                              // Task
-      dist: {                            // Target
-        options: {                       // Target options
-          style: 'expanded',
+    sass: {
+      // Task
+      dist: {
+        // Target
+        options: {
+          // Target options
+          style: "expanded"
         },
-        files: {                         // Dictionary of files
-          './src/redturtle/patterns/slider/static/pattern.css': `${productRoot}/static/pattern.scss`,
-        },
+        files: {
+          // Dictionary of files
+          "./src/redturtle/patterns/slider/static/pattern.css": `${productRoot}/static/pattern.scss`
+        }
       },
+      options: {
+        implementation: sass,
+        sourceMap: true,
+        outputStyle: "compressed"
+      }
     },
     cssmin: {
       target: {
         files: {
-          './src/redturtle/patterns/slider/static/build/redturtle-patterns-slider-bundle-compiled.min.css': [`${productRoot}/libraries/slick/slick.css`, `${productRoot}/static/pattern.css`],
-        },
+          "./src/redturtle/patterns/slider/static/build/redturtle-patterns-slider-bundle-compiled.min.css": [
+            `${productRoot}/static/pattern.css`
+          ]
+        }
       },
       options: {
-        sourceMap: true,
-      },
+        sourceMap: true
+      }
     },
     requirejs: {
-      'redturtle-patterns-slider': {
+      "redturtle-patterns-slider": {
         options: {
-          baseUrl: './',
+          baseUrl: "./",
           generateSourceMaps: true,
           preserveLicenseComments: false,
           paths: {
-            jquery: 'empty:',
-            'pat-base': 'empty:',
-            'slick.min': `${productRoot}/libraries/slick/slick.min`,
-            'redturtle-patterns-slider': `${productRoot}/static/pattern`
+            jquery: "empty:",
+            "pat-base": "empty:",
+            "collective-slick-js": "empty:",
+            "redturtle-patterns-slider": `${productRoot}/static/pattern`
           },
           wrapShim: true,
           name: `${productRoot}/static/bundle.js`,
-          exclude: ['jquery'],
+          exclude: ["jquery"],
           out: `${productRoot}/static/build/redturtle-patterns-slider-bundle-compiled.js`,
-          optimize: 'none',
-        },
-      },
+          optimize: "none"
+        }
+      }
     },
     uglify: {
-      'redturtle-patterns-slider': {
+      "redturtle-patterns-slider": {
         options: {
           sourceMap: true,
           sourceMapName: `./${productRoot}/static/build/redturtle-patterns-slider-bundle-compiled.js.map`,
-          sourceMapIncludeSources: false,
+          sourceMapIncludeSources: false
         },
         files: {
-          './src/redturtle/patterns/slider/static/build/redturtle-patterns-slider-bundle-compiled.js': ['./src/redturtle/patterns/slider/static/build/redturtle-patterns-slider-bundle-compiled.js'],
-        },
-      },
+          "./src/redturtle/patterns/slider/static/build/redturtle-patterns-slider-bundle-compiled.js": [
+            "./src/redturtle/patterns/slider/static/build/redturtle-patterns-slider-bundle-compiled.js"
+          ]
+        }
+      }
     },
     watch: {
       scripts: {
-        files: [`${productRoot}/static/pattern.js`, `${productRoot}/static/bundle.js`],
-        tasks: ['requirejs', 'uglify'],
+        files: [
+          `${productRoot}/static/pattern.js`,
+          `${productRoot}/static/bundle.js`
+        ],
+        tasks: ["requirejs", "uglify"],
         options: {
-          livereload: true,
-        },
+          livereload: true
+        }
       },
       css: {
         files: `${productRoot}/static/pattern.scss`,
-        tasks: ['sass', 'cssmin'],
+        tasks: ["sass", "cssmin"],
         options: {
-          livereload: true,
-        },
-      },
-    },
+          livereload: true
+        }
+      }
+    }
 
     // sed: {
     //   version: {
@@ -84,7 +101,6 @@ module.exports = function (grunt) {
     // },
   });
 
-  grunt.registerTask('default', ['watch']);
-  grunt.registerTask('compile', ['sass', 'cssmin', 'requirejs', 'uglify']);
-
+  grunt.registerTask("default", ["watch"]);
+  grunt.registerTask("compile", ["sass", "cssmin", "requirejs", "uglify"]);
 };
