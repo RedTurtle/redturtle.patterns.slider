@@ -6,8 +6,6 @@
     xmlns:plone="http://namespaces.plone.org/plone"
     i18n_domain="redturtle.patterns.slider">
 
-  <includeDependencies package="." />
-
   <genericsetup:registerProfile
       name="default"
       title="redturtle.patterns.slider"

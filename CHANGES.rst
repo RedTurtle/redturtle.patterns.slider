@@ -5,7 +5,8 @@ Changelog
 0.1.3 (unreleased)
 ------------------
 
-- Nothing changed yet.
+- Plone 6 compatibility.
+  [cekk]
 
 
 0.1.2 (2018-06-11)
