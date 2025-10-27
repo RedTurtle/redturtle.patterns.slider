@@ -1,0 +1,27 @@
+<?xml version="1.0"?>
+<registry>
+  <!-- PATTERNS -->
+  <records prefix="plone.resources/redturtle-patterns-slider"
+            interface='Products.CMFPlone.interfaces.IResourceRegistry'
+            remove="true">
+  </records>
+
+  <!-- EXTERNAL LIBRARIES -->
+  <records prefix="plone.resources/slick.min"
+            interface='Products.CMFPlone.interfaces.IResourceRegistry'
+            remove="true">
+  </records>
+
+  <!-- BUNDLE REGISTRATION AS RESOURCE -->
+  <records prefix="plone.resources/redturtle-patterns-slider-bundle-resource"
+            interface='Products.CMFPlone.interfaces.IResourceRegistry'
+            remove="true">
+  </records>
+
+  <!-- BUNDLE -->
+  <records prefix="plone.bundles/redturtle-patterns-slider-bundle"
+            interface='Products.CMFPlone.interfaces.IBundleRegistry'
+            remove="true">
+  </records>
+
+</registry>
