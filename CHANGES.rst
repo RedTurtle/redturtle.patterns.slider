@@ -2,7 +2,7 @@ Changelog
 =========
 
 
-0.1.3 (unreleased)
+0.1.3 (2025-10-27)
 ------------------
 
 - Unistall registry entries properly.

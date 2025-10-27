@@ -14,7 +14,7 @@ long_description = '\n\n'.join([
 
 setup(
     name='redturtle.patterns.slider',
-    version='0.1.3.dev0',
+    version='0.1.3',
     description="An additional pattern for Mockup that provides a slider.",
     long_description=long_description,
     # Get more from https://pypi.python.org/pypi?%3Aaction=list_classifiers
