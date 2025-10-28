@@ -33,13 +33,11 @@
   <plone:static
       directory="static"
       type="plone"
-      name="redturtle-patterns-slider"
+      name="redturtle.patterns.slider"
       />
 
-  <browser:resourceDirectory
-      name="redturtle-patterns-slider-libraries"
-      directory="libraries"
-      />
+
+    <browser:page name="slider-pattern-demo" for="*" template="pattern-demo.pt" permission="zope2.View" />
 
 
 </configure>

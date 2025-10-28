@@ -1,45 +1,11 @@
 <?xml version="1.0"?>
 <registry>
-  <!-- PATTERNS -->
-  <records prefix="plone.resources/redturtle-patterns-slider"
-            interface='Products.CMFPlone.interfaces.IResourceRegistry'>
-      <value key="js">++plone++redturtle-patterns-slider/pattern.js</value>
-      <value key="css">
-        <element>++plone++redturtle-patterns-slider/pattern.css</element>
-      </value>
-  </records>
 
-  <!-- EXTERNAL LIBRARIES -->
-  <records prefix="plone.resources/slick.min"
-            interface='Products.CMFPlone.interfaces.IResourceRegistry'>
-    <value key="js">++resource++redturtle-patterns-slider-libraries/slick/slick.min.js</value>
-    <value key="css">++resource++redturtle-patterns-slider-libraries/slick/slick.css</value>
-  </records>
-
-  <!-- BUNDLE REGISTRATION AS RESOURCE -->
-  <records prefix="plone.resources/redturtle-patterns-slider-bundle-resource"
-            interface='Products.CMFPlone.interfaces.IResourceRegistry'>
-    <value key="js">++plone++redturtle-patterns-slider/bundle.js</value>
-  </records>
-
-  <!-- BUNDLE -->
-  <records prefix="plone.bundles/redturtle-patterns-slider-bundle"
-            interface='Products.CMFPlone.interfaces.IBundleRegistry'>
-    <value key="resources">
-      <element>redturtle-patterns-slider-bundle-resource</element>
-    </value>
+  <!-- pattern -->
+  <records interface="Products.CMFPlone.interfaces.IBundleRegistry" prefix="plone.bundles/redturtle-patterns-slider">
     <value key="enabled">True</value>
-    <value key="jscompilation">++plone++redturtle-patterns-slider/build/redturtle-patterns-slider-bundle-compiled.js</value>
-    <value key="csscompilation">++plone++redturtle-patterns-slider/build/redturtle-patterns-slider-bundle-compiled.min.css</value>
-    <value key="last_compilation">2015-02-16 00:00:00</value>
-    <value key="depends">plone</value>
-    <value key="stub_js_modules">
-     <element>jquery</element>
-     <element>pat-base</element>
-     <element>mockup-utils</element>
-     <element>pat-logger</element>
-     <element>slick-min</element>
-   </value>
+    <value key="jscompilation">++plone++redturtle.patterns.slider/bundles/slider.min.js</value>
+    <value key="depends">slick-bundle</value>
   </records>
 
 </registry>

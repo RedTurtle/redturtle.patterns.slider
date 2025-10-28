@@ -1,0 +1,40 @@
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en"
+    xmlns:tal="http://xml.zope.org/namespaces/tal"
+    xmlns:metal="http://xml.zope.org/namespaces/metal"
+    xmlns:i18n="http://xml.zope.org/namespaces/i18n"
+    lang="en"
+    metal:use-macro="context/@@main_template/macros/master"
+    i18n:domain="redturtle.patterns.slider">
+<body>
+
+<metal:content-core fill-slot="content-core">
+<metal:block define-macro="content-core">
+  
+  primo esempio
+  <div class="pat-slider">
+    <ul>
+      <li>Slide 1</li>
+      <li>Slide 2</li>
+      <li>Slide 3</li>
+      <li>Slide 4</li>
+      <li>Slide 5</li>
+    </ul>
+
+  </div>
+    secondo esempio
+    <section class="pat-slider">
+      <div >
+        text
+      </div>
+      <div >
+        text 2
+      </div>
+      <div >
+        text 3
+      </div>
+    </section>
+</metal:block>
+</metal:content-core>
+
+</body>
+</html>

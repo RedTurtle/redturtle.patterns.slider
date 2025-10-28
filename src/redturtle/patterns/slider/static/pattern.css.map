@@ -1,7 +1,0 @@
-{
-"version": 3,
-"mappings": "AACE,iBAAa;EACX,gBAAgB,EAAE,GAAG",
-"sources": ["pattern.scss"],
-"names": [],
-"file": "pattern.css"
-}
