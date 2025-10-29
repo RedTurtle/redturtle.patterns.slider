@@ -65,19 +65,19 @@ JS Development and bundling
 ---------------------------
 
 If you need to develop this product's javascripts or styles, you need to compile the code
-for the resource registry bundle. To do this, there are two grunt tasks.
+for the resource registry bundle.
 
-First of all, you need to install grunt dependencies listed in package.json file in the root of this package:
+First of all, you need to install dependencies listed in package.json file in the root of this package:
 
 .. code::
 
   npm install
 
 
-After that, you can use two different grunt tasks:
+After that, you can use two different scripts::
 
-- `grunt`: the default task, that listen files changes with `watch` and re-build resources and bundles automatically
-- `grunt compile`: to manually compile all resources and bundles
+- `npm run watch`: the default task, that listen files changes with `watch` and re-build resources and bundles automatically
+- `npm run compile`: to manually compile all resources and bundles
 
 
 Contribute
