@@ -5,7 +5,6 @@
   <records interface="Products.CMFPlone.interfaces.IBundleRegistry" prefix="plone.bundles/redturtle-patterns-slider">
     <value key="enabled">True</value>
     <value key="jscompilation">++plone++redturtle.patterns.slider/bundles/slider.min.js</value>
-    <value key="depends">slick-bundle</value>
   </records>
 
 </registry>
