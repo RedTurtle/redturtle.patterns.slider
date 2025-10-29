@@ -1,25 +1,33 @@
 import { BasePattern } from "@patternslib/patternslib/src/core/basepattern";
 import Parser from "@patternslib/patternslib/src/core/parser";
 import registry from "@patternslib/patternslib/src/core/registry";
+import $ from "jquery";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 import "slick-carousel";
-import $ from "jquery";
 
 export const parser = new Parser("slider");
+parser.addArgument("dots", true);
+parser.addArgument("slidesToShow", 1);
+parser.addArgument("slidesToScroll", 1);
+parser.addArgument("focusOnSelect", true);
+//parser.addArgument("centerMode", true);
+parser.addArgument("infinite", true);
+parser.addArgument("lazyLoad", "ondemand");
+parser.addArgument("responsive", [
+  {
+    breakpoint: 600,
+    settings: {
+      slidesToShow: 1,
+      slidesToScroll: 1,
+    },
+  },
+]);
 
 class Pattern extends BasePattern {
   static name = "slider";
   static trigger = ".pat-slider";
   static parser = parser;
-
-  static defaults = {
-    dots: true,
-    slidesToShow: 4,
-    slidesToScroll: 4,
-    arrows: true,
-    lazyLoad: "ondemand",
-  };
 
   async init() {
     import("./slider.scss");

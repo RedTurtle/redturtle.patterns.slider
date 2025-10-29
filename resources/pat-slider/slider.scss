@@ -1,5 +1,14 @@
-button {
-    &.slick-next {
-        background-color: red;
+.slick-slider {
+  button {
+    &.slick-next,
+    &.slick-prev {
+      &:before {
+        color: var(--bs-primary);
+      }
     }
+  }
+
+  .slick-slide {
+    padding: 0.5rem;
+  }
 }

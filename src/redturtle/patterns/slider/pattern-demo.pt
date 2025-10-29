@@ -9,30 +9,42 @@
 
 <metal:content-core fill-slot="content-core">
 <metal:block define-macro="content-core">
-  
-  primo esempio
-  <div class="pat-slider">
-    <ul>
-      <li>Slide 1</li>
-      <li>Slide 2</li>
-      <li>Slide 3</li>
-      <li>Slide 4</li>
-      <li>Slide 5</li>
-    </ul>
 
-  </div>
-    secondo esempio
+
+    esempio
     <section class="pat-slider">
       <div >
-        text
+        <img src="https://picsum.photos/600/400"/>
       </div>
       <div >
-        text 2
+        <img src="https://picsum.photos/600/400"/>
       </div>
       <div >
-        text 3
+        <img src="https://picsum.photos/600/400"/>
+      </div>
+        <div >
+        <img src="https://picsum.photos/600/400"/>
+      </div>
+        <div >
+        <img src="https://picsum.photos/600/400"/>
+      </div>
+      <div >
+        <img src="https://picsum.photos/600/400"/>
+      </div>
+        <div >
+        <img src="https://picsum.photos/600/400"/>
+      </div>
+        <div >
+        <img src="https://picsum.photos/600/400"/>
+      </div>
+        <div >
+        <img src="https://picsum.photos/600/400"/>
+      </div>
+        <div >
+        <img src="https://picsum.photos/600/400"/>
       </div>
     </section>
+
 </metal:block>
 </metal:content-core>
 
