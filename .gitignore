@@ -35,5 +35,4 @@ report.html
 !.travis.yml
 !src/redturtle
 node_modules
-package.json
 yarn.lock
