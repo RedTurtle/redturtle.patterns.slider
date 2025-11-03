@@ -14,6 +14,7 @@ parser.addArgument("focusOnSelect", true);
 //parser.addArgument("centerMode", true);
 parser.addArgument("infinite", true);
 parser.addArgument("lazyLoad", "ondemand");
+parser.addArgument("initialSlide", 0);
 parser.addArgument("responsive", [
   {
     breakpoint: 600,
@@ -31,10 +32,15 @@ class Pattern extends BasePattern {
 
   async init() {
     import("./slider.scss");
-    console.log("Initializing slider with options:", this.options);
+    console.log(
+      "Initializing slider with options:",
+      this.options,
+      "parser",
+      parser,
+    );
 
     const aaa = $(this.el).slick(this.options);
-    console.log("Slick slider initialized:", aaa);
+    console.log("Slick slider initialized:", aaa, this.options);
     const event = new CustomEvent("patSliderInit", { detail: this.el });
     document.dispatchEvent(event);
   }
