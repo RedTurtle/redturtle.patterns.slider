@@ -9,7 +9,8 @@ class HiddenProfiles(object):
     def getNonInstallableProfiles(self):
         """Hide uninstall profile from site-creation and quickinstaller"""
         return [
-            'redturtle.patterns.slider:uninstall',
+            "redturtle.patterns.slider:uninstall",
+            "redturtle.patterns.slider:to_2000",
         ]
 
 
