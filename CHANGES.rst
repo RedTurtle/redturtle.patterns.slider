@@ -5,7 +5,7 @@ Changelog
 0.1.3 (2025-10-27)
 ------------------
 
-- Plone 6 compatibility. Use 1.x versions for Plone < 6.
+- Plone 6 compatibility. Use 0.x versions for Plone < 6.
   [cekk]
 - Unistall registry entries properly.
   [cekk]
