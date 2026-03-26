@@ -7,3 +7,12 @@ global-exclude *.pyc
 exclude .nvmrc
 exclude Gruntfile.js
 prune resources
+exclude .eslintrc.js
+exclude .prettierignore
+exclude .python-version
+exclude .release-it.js
+exclude babel.config.js
+exclude jest.config.js
+exclude package-lock.json
+exclude package.json
+exclude webpack.config.js
