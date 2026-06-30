@@ -2,5 +2,9 @@
 """Init and utils."""
 
 from zope.i18nmessageid import MessageFactory
+from logging import getLogger
 
-_ = MessageFactory('redturtle.patterns.slider')
+PACKAGE_NAME='redturtle.patterns.slider'
+
+logger = getLogger(PACKAGE_NAME)
+_ = MessageFactory(PACKAGE_NAME)
