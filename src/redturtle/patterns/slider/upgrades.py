@@ -1,6 +1,6 @@
-from collective.editablemenu import logger
 from plone import api
 from plone.base.utils import get_installer
+from . import logger
 
 default_profile = "profile-redturtle.patterns.slider:default"
 
